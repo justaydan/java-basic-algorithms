@@ -142,13 +142,14 @@ public class Task3 {
 //        Nümunə:
 //        Gözlənilən çıxış:
 //        madam palindrome-dur.
-//        String word = "madam";
-//        String reverse = "";
-//        for (int i = word.length() - 1; i >= 0; i--) {
-//            reverse += word.charAt(i);
-//        }
-//        String result = reverse == word ? "%s palindrome-dur" : "%s palindrome deyil";
-//        System.out.printf(result, word);
+        String word = "madam";
+        StringBuilder reverse = new StringBuilder();
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reverse.append(word.charAt(i));
+        }
+        String result = reverse.toString().equals(word) ? "%s palindrome-dur" : "%s palindrome deyil";
+        System.out.printf(result, word);
 
 //        Task 7:Verilmiş cümlədə hər bir hərfin neçə dəfə
 //        təkrarlandığını tap.
